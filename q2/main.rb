@@ -7,8 +7,7 @@ class Q2::Main < Base
 
     name = gets.chomp
     is_name_string = !name.match(/[0-9]+/)
-    return puts "文字列で入力してください" if is_name_string
-
+    return puts "文字列で入力してください" unless is_name_string
     user = User.new(name)
     user.self_introduce
   end
